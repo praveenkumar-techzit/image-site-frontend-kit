@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Burger theme colors
+				'burger-gold': 'hsl(var(--burger-gold))',
+				'burger-red': 'hsl(var(--burger-red))',
+				'burger-brown': 'hsl(var(--burger-brown))',
+				'burger-cream': 'hsl(var(--burger-cream))',
+				'burger-dark': 'hsl(var(--burger-dark))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

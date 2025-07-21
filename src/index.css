@@ -2,39 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Burger House Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 42 100% 98%;
+    --foreground: 25 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 95% 55%;
+    --primary-foreground: 25 25% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 75% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 42 30% 95%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 32 85% 60%;
+    --accent-foreground: 25 25% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 42 25% 88%;
+    --input: 42 25% 90%;
+    --ring: 45 95% 55%;
+
+    /* Custom burger theme colors */
+    --burger-gold: 45 95% 55%;
+    --burger-red: 0 75% 55%;
+    --burger-brown: 25 35% 25%;
+    --burger-cream: 42 50% 95%;
+    --burger-dark: 25 25% 15%;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--burger-gold)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--burger-gold) / 0.9), hsl(var(--accent) / 0.8));
+
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--burger-red) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--burger-brown) / 0.15);
 
     --radius: 0.5rem;
 
