@@ -19,11 +19,14 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-2" href="#home">
+            <!-- <a class="navbar-brand fw-bold fs-2" href="#home">
                 <i class="fas fa-hamburger me-2 text-warning"></i>
                 Burger House
+            </a> -->
+            <a class="navbar-brand fw-bold fs-2" href="#home">
+                <img src="src/assets/Place_Your_Logo_Here_(Double_Click_to_Edit).png" alt="Burger House Logo" style="height: 50px;">
             </a>
-            
+                        
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,41 +53,61 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-overlay">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="hero-content text-white">
-                            <h1 class="display-2 fw-bold mb-4 animate-slide-up">
-                                The Best <span class="text-warning">Burgers</span> in Town
-                            </h1>
-                            <p class="lead mb-5 animate-slide-up" style="animation-delay: 0.2s;">
-                                Since 1999, we've been serving the juiciest, most flavorful burgers made with premium ingredients and endless passion.
-                            </p>
-                            <div class="hero-buttons animate-slide-up" style="animation-delay: 0.4s;">
-                                <a href="#menu" class="btn btn-warning btn-lg me-3 px-4 py-3">
-                                    <i class="fas fa-utensils me-2"></i>View Menu
-                                </a>
-                                <a href="#reservation" class="btn btn-outline-light btn-lg px-4 py-3">
-                                    <i class="fas fa-calendar-alt me-2"></i>Book Table
-                                </a>
-                            </div>
+<section id="home" class="hero-section" style="background: url('src/assets/burger_promo_fully_cleaned.jpg') no-repeat center center; background-size: cover;">
+    <div class="hero-overlay">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <!-- Content for Hero Section -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add spacing between sections -->
+<div class="my-5"></div>
+
+<section class="py-12 bg-white">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Left Side: Most Popular Burger -->
+            <div class="col-lg-6">
+                <div class="rounded overflow-hidden shadow-lg">
+                    <img src="src/assets/section_popular_burger.jpg" alt="Most Popular Burger" class="w-100 object-cover">
+                </div>
+            </div>
+
+            <!-- Right Side: More Fun More Taste and Fresh & Chili -->
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <!-- Card 2: More Fun More Taste -->
+                    <div class="col-md-12">
+                        <div class="rounded overflow-hidden shadow-lg">
+                            <img src="src/assets/section_more_fun.jpg" alt="More Fun More Taste" class="w-100 object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Fresh & Chili -->
+                    <div class="col-md-12">
+                        <div class="rounded overflow-hidden shadow-lg">
+                            <img src="src/assets/section_fresh_chili.jpg" alt="Fresh and Chili" class="w-100 object-cover">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Menu Section -->
     <section id="menu" class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold text-dark mb-3">Our Menu</h2>
-                <p class="lead text-muted">Handcrafted burgers made with the finest ingredients</p>
+           <div class="text-center mb-5">
+            <!-- Top Banner -->
+            <div class="mb-3">
+                <span class="badge bg-warning text-dark fs-5 px-3 py-2" style="font-family: 'Poppins', sans-serif;">ALWAYS TASTY BURGER</span>
             </div>
+            <h2 class="display-4 fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif; color: #5A3E2B;">CHOOSE & ENJOY</h2>
+            <p class="lead text-muted" style="font-family: 'Poppins', sans-serif;">Handcrafted burgers made with the finest ingredients</p>
+        </div>
             
             <div class="row g-4">
                 <!-- Classic Burger -->
@@ -99,15 +122,16 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Classic Burger</h5>
                             <p class="card-text text-muted">Juicy beef patty, lettuce, tomato, onion, pickles, and our special sauce</p>
-                            <button class="btn btn-warning w-100">
-                                <i class="fas fa-plus me-2"></i>Add to Order
+                        
+                            <button class="btn btn-danger w-100">
+                                <i class="fas fa-plus me-2"></i> Order Now 
                             </button>
+                          
                         </div>
                     </div>
                 </div>
 
-                <!-- BBQ Bacon Burger -->
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="card menu-card h-100 shadow-sm">
                         <div class="card-img-container">
                             <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=400&h=300&fit=crop" class="card-img-top" alt="BBQ Bacon Burger">
@@ -123,7 +147,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Spicy Jalapeño -->
                 <div class="col-lg-4 col-md-6">
@@ -137,8 +161,8 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Spicy Jalapeño</h5>
                             <p class="card-text text-muted">Fresh jalapeños, pepper jack cheese, spicy mayo, and crispy lettuce</p>
-                            <button class="btn btn-warning w-100">
-                                <i class="fas fa-plus me-2"></i>Add to Order
+                            <button class="btn btn-danger w-100">
+                                <i class="fas fa-plus me-2"></i> Order Now 
                             </button>
                         </div>
                     </div>
@@ -156,15 +180,18 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Mushroom Swiss</h5>
                             <p class="card-text text-muted">Sautéed mushrooms, Swiss cheese, and garlic aioli on a brioche bun</p>
-                            <button class="btn btn-warning w-100">
-                                <i class="fas fa-plus me-2"></i>Add to Order
+                            <!-- <button class="btn btn-warning w-100">
+                                <i class="fas fa-plus me-2"></i>Order Now 
+                            </button> -->
+                            <button class="btn btn-danger w-100">
+                                <i class="fas fa-plus me-2"></i> Order Now 
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Crispy Fries -->
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="card menu-card h-100 shadow-sm">
                         <div class="card-img-container">
                             <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop" class="card-img-top" alt="Crispy Fries">
@@ -180,10 +207,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Refreshing Drinks -->
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="card menu-card h-100 shadow-sm">
                         <div class="card-img-container">
                             <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop" class="card-img-top" alt="Refreshing Drinks">
@@ -199,7 +226,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -208,47 +235,49 @@
     <section id="story" class="py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="story-content">
-                        <h2 class="display-4 fw-bold mb-4">Our Story</h2>
-                        <p class="lead mb-4">
-                            Founded in 1999, Burger House began as a small family restaurant with a simple mission: 
-                            to serve the most delicious, high-quality burgers in town.
-                        </p>
-                        <p class="mb-4">
-                            Over the years, we've maintained our commitment to using only the freshest ingredients, 
-                            sourcing our beef from local farms, and preparing each burger with care and attention to detail. 
-                            Our secret? It's the love and passion we put into every meal.
-                        </p>
-                        <div class="row text-center">
-                            <div class="col-4">
-                                <div class="stat-item">
-                                    <h3 class="fw-bold text-warning display-6">25+</h3>
-                                    <p class="text-muted">Years of Excellence</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="stat-item">
-                                    <h3 class="fw-bold text-warning display-6">100K+</h3>
-                                    <p class="text-muted">Happy Customers</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="stat-item">
-                                    <h3 class="fw-bold text-warning display-6">50+</h3>
-                                    <p class="text-muted">Menu Items</p>
-                                </div>
-                            </div>
-                        </div>
+    <div class="col-lg-6">
+        <div class="story-content" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+            <p class="lead mb-4">
+                DISCOVER
+            </p>
+            <h2 class="display-4 fw-bold mb-4">UPCOMING EVENTS</h2>
+            <p class="lead mb-4">
+                Founded in 1999, Burger House began as a small family restaurant with a simple mission: 
+                to serve the most delicious, high-quality burgers in town.
+            </p>
+            <p class="mb-4">
+                Over the years, we've maintained our commitment to using only the freshest ingredients, 
+                sourcing our beef from local farms, and preparing each burger with care and attention to detail. 
+                Our secret? It's the love and passion we put into every meal.
+            </p>
+            <!-- <div class="row text-center">
+                <div class="col-4">
+                    <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                        <h3 class="fw-bold text-warning display-6">25+</h3>
+                        <p class="text-muted">Years of Excellence</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="story-image">
-                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" 
-                             class="img-fluid rounded shadow-lg" alt="Restaurant Interior">
+                <div class="col-4">
+                    <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                        <h3 class="fw-bold text-warning display-6">100K+</h3>
+                        <p class="text-muted">Happy Customers</p>
                     </div>
                 </div>
-            </div>
+                <div class="col-4">
+                    <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                        <h3 class="fw-bold text-warning display-6">50+</h3>
+                        <p class="text-muted">Menu Items</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+  <div class="col-lg-6">
+    <div class="story-image">
+        <img src="src/assets/burger_and_fries_hd.jpg" class="img-fluid rounded shadow-lg" alt="Restaurant Interior" style="width: 100%; height: auto; max-height: 500px;">
+    </div>
+</div>
+</div>
         </div>
     </section>
 
