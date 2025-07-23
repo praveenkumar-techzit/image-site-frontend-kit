@@ -383,3 +383,41 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #ffb300;
 }
+
+ #storyCarousel {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #eventCarousel .carousel-inner {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        padding: 3rem;
+    }
+
+    #eventCarousel .carousel-indicators {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        margin: 0;
+        z-index: 10;
+        justify-content: flex-start;
+    }
+
+    #eventCarousel .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        border: none;
+        margin-right: 8px;
+        opacity: 1;
+    }
+
+    #eventCarousel .carousel-indicators .active {
+        background-color: #f8b400;
+    }
+
+
+
