@@ -1,5 +1,4 @@
-/* Custom CSS for Burger House */
-
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,11 @@ body {
     color: #333;
 }
 
-/* Custom Navbar */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
 .custom-navbar {
     background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(10px);
@@ -58,15 +61,22 @@ body {
     width: 100%;
 }
 
-/* Hero Section */
-.hero-section {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1920&h=1080&fit=crop') center/cover;
-    position: relative;
-    display: flex;
-    align-items: center;
+/* ✅ Full Image Hero – Perfect Poster Display */
+.hero-image-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
 }
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
 
 .hero-overlay {
     width: 100%;
@@ -75,10 +85,16 @@ body {
     align-items: center;
 }
 
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
 .hero-content h1 {
     font-size: 4rem;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content .lead {
@@ -91,6 +107,7 @@ body {
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
 }
 
 .hero-buttons .btn:hover {
@@ -98,155 +115,24 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Buttons */
 .btn-warning {
     background: linear-gradient(45deg, #ffc107, #ffb300);
     border: none;
     color: #000;
+    animation: pulse 2s infinite;
 }
 
 .btn-warning:hover {
     background: linear-gradient(45deg, #ffb300, #ff8f00);
     color: #000;
+    animation: none;
 }
 
-/* Animations */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-slide-up {
-    animation: slideUp 0.8s ease forwards;
-    opacity: 0;
-}
-
-/* Menu Section */
-.menu-card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.menu-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-container {
-    position: relative;
-    overflow: hidden;
-    height: 250px;
-}
-
-.card-img-top {
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
-
-.menu-card:hover .card-img-top {
-    transform: scale(1.1);
-}
-
-.card-overlay {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
-.price-tag {
-    background: linear-gradient(45deg, #ffc107, #ffb300);
-    color: #000;
-    padding: 8px 15px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.card-text {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* Story Section */
-.story-content {
-    padding: 2rem 0;
-}
-
-.story-content h2 {
-    color: #333;
-    margin-bottom: 2rem;
-}
-
-.story-content .lead {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.story-content p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.8;
-}
-
-.stat-item {
-    padding: 1rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-    background: #f8f9fa;
-}
-
-.story-image img {
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-/* Reservation Section */
-.card {
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.form-control, .form-select {
-    border-radius: 10px;
-    border: 2px solid #e9ecef;
-    padding: 12px 16px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.form-control:focus, .form-select:focus {
-    border-color: #ffc107;
-    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
-}
-
-.form-label {
-    font-weight: 600;
-    margin-bottom: 0.7rem;
-    color: #333;
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
 }
 
 /* Footer */
@@ -273,32 +159,83 @@ footer {
     width: 20px;
 }
 
-/* Responsive Design */
+/* Carousel */
+#storyCarousel {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#eventCarousel .carousel-inner {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+}
+
+#eventCarousel .carousel-indicators {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    margin: 0;
+    z-index: 10;
+    justify-content: flex-start;
+}
+
+#eventCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    margin-right: 8px;
+    opacity: 1;
+}
+
+#eventCarousel .carousel-indicators .active {
+    background-color: #f8b400;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ffb300;
+}
+
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: 400px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero-content .lead {
         font-size: 1.1rem;
     }
-    
+
     .hero-buttons .btn {
         display: block;
         width: 100%;
         margin-bottom: 1rem;
     }
-    
-    .hero-buttons .btn:last-child {
-        margin-bottom: 0;
-    }
-    
+
     .display-4 {
         font-size: 2.5rem;
-    }
-    
-    .card-img-container {
-        height: 200px;
     }
 }
 
@@ -306,115 +243,48 @@ footer {
     .hero-content h1 {
         font-size: 2rem;
     }
-    
+
     .navbar-brand {
         font-size: 1.5rem !important;
     }
-    
+
     .display-4 {
         font-size: 2rem;
     }
-}
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Loading animation for images */
-.card-img-top {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+    footer .row > div {
+        text-align: center;
+        margin-bottom: 20px;
     }
-}
 
-/* Pulse animation for buttons */
-.btn-warning {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    #reservation .row.align-items-center {
+        flex-direction: column;
     }
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
-    }
-}
 
-/* Remove pulse animation on hover */
-.btn-warning:hover {
-    animation: none;
-}
-
-/* Parallax effect for hero section */
-.hero-section {
-    background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        background-attachment: scroll;
-    }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ffc107;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #ffb300;
-}
-
- #storyCarousel {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+    #reservation img {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 1rem;
     }
 
     #eventCarousel .carousel-inner {
-        background-color: #fff;
-        border-radius: 0.5rem;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        padding: 3rem;
+        padding: 1.5rem;
     }
 
-    #eventCarousel .carousel-indicators {
-        position: absolute;
-        bottom: 25px;
-        left: 25px;
-        margin: 0;
-        z-index: 10;
-        justify-content: flex-start;
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
     }
 
-    #eventCarousel .carousel-indicators button {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: white;
-        border: none;
-        margin-right: 8px;
-        opacity: 1;
+    .carousel-item img {
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
     }
 
-    #eventCarousel .carousel-indicators .active {
-        background-color: #f8b400;
+    .story-content h2,
+    .display-4,
+    .display-6 {
+        font-size: 1.5rem;
     }
+}
