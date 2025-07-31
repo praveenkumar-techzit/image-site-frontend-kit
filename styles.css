@@ -9,6 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
+   
 }
 
 html {
@@ -62,10 +63,11 @@ html {
 }
 
 /* ✅ Full Image Hero – Perfect Poster Display */
+/* ✅ Fix: Push hero image below fixed navbar */
 .hero-image-wrapper {
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin-top: 90px; /* 👈 This pushes hero section below fixed navbar */
     background-color: #000;
 }
 
@@ -76,6 +78,7 @@ html {
     object-fit: contain;
     max-width: 100%;
 }
+
 
 
 .hero-overlay {
